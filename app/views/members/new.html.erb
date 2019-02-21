@@ -1,0 +1,12 @@
+Create a new member
+
+<%= form_for @member do |f| %>
+  <% if flash[:error] %>
+    <div><%= flash[:error] %></div>
+  <% end %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+  <%= f.label :url %>
+  <%= f.url_field :url, required: true %>
+  <%= f.submit %>
+<% end %>

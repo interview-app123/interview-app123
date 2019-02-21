@@ -1,0 +1,21 @@
+<h1>All Members</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>URL</th>
+      <th>Friend Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @members.each do |member| %>
+        <tr>
+          <td><%= link_to member.name, member %></td>
+          <td><%= member.url %></td>
+          <td><%= member.friend_count %></td>
+        </tr>
+      <% end %>
+  </tbody>
+</table>
+<hr>
+<%= link_to 'Create a new member >', new_member_path %>

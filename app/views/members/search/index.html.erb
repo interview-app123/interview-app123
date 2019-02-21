@@ -1,0 +1,7 @@
+<% if @members.empty? %>
+  No Results
+<% else %>
+  <% @members.each do |member| %>
+    <%= search_result_connection(member) + " (\"#{search_result_match(member)}\")" %>
+  <% end %>
+<% end %>
